@@ -3,7 +3,7 @@ Resources:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: default VPC security group
-      VpcId: <VPC_ID>
+      VpcId: ${VPC_ID}
       SecurityGroupIngress:
         - CidrIp: <192.168.2.0>/24
           FromPort: 80
@@ -14,7 +14,7 @@ Resources:
     Type: AWS::EC2::Instance
     Properties:
       InstanceType: t2.micro
-      ImageId: <AMI_ID>
-      SubnetId: <PRIVATE_SUBNET_ID>
+      ImageId: ${AMI_ID}
+      SubnetId: ${PRIVATE_SUBNET_ID}
       SecurityGroupIds:
         - !Ref maxiivanSecurityGroup
