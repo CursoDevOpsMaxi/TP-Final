@@ -1,11 +1,11 @@
 Resources:
-  MySecurityGroup:
+  maxiivanSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupDescription: Security Group for EC2
+      GroupDescription: default VPC security group
       VpcId: <VPC_ID>
       SecurityGroupIngress:
-        - CidrIp: <10.0.0.0>/24
+        - CidrIp: <192.168.2.0>/24
           FromPort: 80
           ToPort: 80
           IpProtocol: tcp
@@ -17,4 +17,4 @@ Resources:
       ImageId: <AMI_ID>
       SubnetId: <PRIVATE_SUBNET_ID>
       SecurityGroupIds:
-        - !Ref MySecurityGroup
+        - !Ref maxiivanSecurityGroup
