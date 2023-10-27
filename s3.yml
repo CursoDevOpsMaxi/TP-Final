@@ -11,12 +11,3 @@ Resources:
           - Status: Enabled
             Prefix: logs/
             ExpirationInDays: 30
-      CorsConfiguration:
-        CorsRules:
-          - AllowedHeaders:
-              - '*'
-            AllowedMethods:
-              - GET
-              - PUT
-            AllowedOrigins:
-              - '*'
