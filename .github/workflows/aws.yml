@@ -22,16 +22,16 @@ jobs:
 
       - name: Deploy S3 Bucket
         run: |
-          aws cloudformation create-stack --stack-name MyS3Stack --template-body file://S3.yml
-          aws cloudformation wait stack-create-complete --stack-name MyS3Stack
+          aws cloudformation create-stack --stack-name maxiivanS3Stack --template-body file://S3.yml
+          aws cloudformation wait stack-create-complete --stack-name maxiivanS3Stack
 
       - name: Deploy VPC
         run: |
-          aws cloudformation create-stack --stack-name MyVPCStack --template-body file://VPC.yml
-          aws cloudformation wait stack-create-complete --stack-name MyVPCStack
+          aws cloudformation create-stack --stack-name maxiivanVPCStack --template-body file://VPC.yml
+          aws cloudformation wait stack-create-complete --stack-name maxiivanVPCStack
 
       - name: Deploy EC2 Instance
         run: |
-          aws cloudformation create-stack --stack-name MyEC2Stack --template-body file://EC2.yml
-          aws cloudformation wait stack-create-complete --stack-name MyEC2Stack
+          aws cloudformation create-stack --stack-name maxiivanEC2Stack --template-body file://EC2.yml
+          aws cloudformation wait stack-create-complete --stack-name maxiivanEC2Stack
 
